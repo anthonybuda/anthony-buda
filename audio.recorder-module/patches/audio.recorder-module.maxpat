@@ -32,12 +32,102 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"id" : "obj-68",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 480.0, 345.0, 210.0, 60.0 ],
+					"presentation_rect" : [ 427.0, 345.0, 0.0, 0.0 ],
+					"text" : "You might want to check out the [waveform~] object as a way of keeping an eye on what’s going on inside your buffers:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-67",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 495.0, 420.0, 60.0, 20.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-66",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 495.0, 450.0, 108.0, 18.0 ],
+					"text" : "set #1-live-sample"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"bordercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
+					"buffername" : "#1-live-sample",
+					"fontsize" : 9.0,
+					"gridcolor" : [ 0.301961, 0.337255, 0.403922, 0.501961 ],
+					"id" : "obj-64",
+					"labelbgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"labeltextcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ],
+					"linecolor" : [ 0.301961, 0.337255, 0.403922, 0.501961 ],
+					"maxclass" : "waveform~",
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"outmode" : 0,
+					"patching_rect" : [ 495.0, 480.0, 160.0, 80.0 ],
+					"prototypename" : "M4L.orange",
+					"selectioncolor" : [ 0.666667, 0.698039, 0.717647, 0.25098 ],
+					"setmode" : 1,
+					"snapto" : 2,
+					"ticks" : 1,
+					"vlabels" : 1,
+					"waveformcolor" : [ 1.0, 0.403922, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-62",
+					"linecount" : 9,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 953.75, 180.0, 240.5, 146.0 ],
+					"presentation_rect" : [ 987.5, 180.0, 0.0, 0.0 ],
+					"text" : "I’d actually suggest keeping this module to just recording your samples — and then building a playback module separately.\nThere are a bunch of ways to playback samples including granulation and convolution, so having one module that just records and can be accessed by all of those different playback types could be good.",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-60",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 88.654327, 480.0, 315.0, 60.0 ],
+					"patching_rect" : [ 88.654327, 570.0, 315.0, 60.0 ],
 					"text" : "(To be flexible you could build a [poly~] patch that would create your buffers and potentially also your [groove~] objects, but if you’re happy having the number fixed, that’s fine.)"
 				}
 
@@ -124,13 +214,13 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-37",
-					"linecount" : 2,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 88.654327, 450.0, 315.0, 33.0 ],
+					"patching_rect" : [ 88.654327, 450.0, 315.0, 100.0 ],
 					"presentation_rect" : [ 89.0, 449.0, 0.0, 0.0 ],
-					"text" : "Then you can build the set messages mentioned above to match your naming pattern"
+					"text" : "Then you can build the set messages mentioned above to match your naming pattern\n\nYou might want to also consider maximum lengths for your buffers. This one is set to 1000ms, which might be too short — having 10000 (ten seconds) to play with could be handy."
 				}
 
 			}
@@ -269,7 +359,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 556.0, 150.0, 20.0 ],
+					"patching_rect" : [ 253.654327, 741.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 153.0, 36.0, 113.0, 20.0 ],
 					"text" : "Record Destination"
@@ -285,7 +375,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 574.5, 154.154327, 18.0 ],
+					"patching_rect" : [ 253.654327, 759.5, 154.154327, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.654327, 267.55249, 137.0, 18.0 ],
 					"text" : "Anthony Buda - 2015/3"
@@ -410,7 +500,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 105.5, 93.0, 29.5, 22.0 ],
+									"patching_rect" : [ 105.5, 93.0, 29.5, 18.0 ],
 									"text" : "0"
 								}
 
@@ -424,7 +514,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 41.0, 225.5, 32.5, 22.0 ],
+									"patching_rect" : [ 41.0, 225.5, 32.5, 20.0 ],
 									"text" : "*~"
 								}
 
@@ -438,7 +528,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 120.0, 176.0, 98.0, 22.0 ],
+									"patching_rect" : [ 120.0, 176.0, 98.0, 20.0 ],
 									"text" : "cycle~ hamming"
 								}
 
@@ -452,7 +542,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "signal" ],
-									"patching_rect" : [ 41.0, 137.5, 136.0, 22.0 ],
+									"patching_rect" : [ 41.0, 137.5, 136.0, 20.0 ],
 									"text" : "groove~ #1-live-sample"
 								}
 
@@ -466,7 +556,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 41.0, 93.0, 53.0, 23.0 ],
+									"patching_rect" : [ 41.0, 93.0, 53.0, 19.0 ],
 									"text" : "loop $1"
 								}
 
@@ -747,7 +837,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 656.0, 150.0, 20.0 ],
+					"patching_rect" : [ 253.654327, 841.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 278.25, 10.0, 109.5, 20.0 ],
 					"text" : "Live Sample Bank",
@@ -780,7 +870,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 626.0, 150.0, 20.0 ],
+					"patching_rect" : [ 253.654327, 811.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.654327, 138.251373, 66.0, 20.0 ],
 					"text" : "Input Gain"
@@ -796,7 +886,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 598.5, 150.0, 20.0 ],
+					"patching_rect" : [ 253.654327, 783.5, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.654327, 36.0, 81.0, 20.0 ],
 					"text" : "Input On/Off"
@@ -952,7 +1042,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 88.654327, 420.0, 159.0, 20.0 ],
+					"patching_rect" : [ 168.0, 420.0, 159.0, 20.0 ],
 					"text" : "buffer~ #1-live-sample 1000"
 				}
 
@@ -1282,6 +1372,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-66", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-66", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-67", 0 ]
 				}
 
 			}
