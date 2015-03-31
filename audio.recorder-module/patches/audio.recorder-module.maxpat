@@ -32,6 +32,21 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"id" : "obj-69",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 540.0, 255.0, 155.0, 60.0 ],
+					"text" : "(hint: don’t forget that the first item in both the [umenu] and the [live.tab] has an index of 0 not 1)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-68",
 					"linecount" : 4,
 					"maxclass" : "comment",
@@ -185,7 +200,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 540.0, 225.0, 150.0, 18.0 ],
-					"text" : "set live.slot-1"
+					"text" : "set live.slot-0"
 				}
 
 			}
@@ -262,7 +277,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 359.0, 180.0, 155.0, 141.0 ],
-					"text" : "you can change which buffer your [record~] is writing to with a “set” message, so by selecting an index from the menu or tab interface (leftmost outlet on both) you could build a messgae that sets the [record~] to write to the buffer you want"
+					"text" : "you can change which [buffer~] your [record~] is writing to with a “set” message, so by selecting an index from the menu or tab interface (leftmost outlet on both) you could build a messgae that sets the [record~] to write to the buffer you want"
 				}
 
 			}
@@ -947,7 +962,7 @@
 					"patching_rect" : [ 1039.0, 22.5, 58.0, 20.0 ],
 					"restore" : 					{
 						"live.gain~" : [ 0.0 ],
-						"slot-num" : [ 5.0 ]
+						"slot-num" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
