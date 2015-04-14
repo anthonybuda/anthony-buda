@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 76.0, 89.0, 1533.0, 923.0 ],
+		"rect" : [ 76.0, 89.0, 1164.0, 923.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,27 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"args" : [ "audio.recorder-module", 4 ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-2",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "cs.2click-inputs.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 4,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "signal", "signal", "signal", "signal" ],
+					"patching_rect" : [ 308.0, 86.0, 120.0, 75.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-24",
 					"maxclass" : "newobj",
@@ -113,9 +134,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 77.0, 150.0, 22.0 ],
+					"patching_rect" : [ 127.0, 77.0, 167.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf set live.sample-%ld"
+					"text" : "sprintf set #1-live.sample-%ld"
 				}
 
 			}
@@ -147,7 +168,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 127.0, 122.0, 150.0, 22.0 ],
 					"style" : "",
-					"text" : "set live.sample-3"
+					"text" : "set #1-live.sample-14"
 				}
 
 			}
@@ -359,8 +380,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 278.25, 10.0, 109.5, 20.0 ],
 					"style" : "",
-					"text" : "Live Sample Bank",
-					"textjustification" : 0
+					"text" : "Live Sample Bank"
 				}
 
 			}
@@ -469,12 +489,12 @@
 					"patching_rect" : [ 907.0, 17.5, 58.0, 22.0 ],
 					"restore" : 					{
 						"live.gain~" : [ 0.0 ],
-						"slot-num" : [ 3.0 ]
+						"slot-num" : [ 14.0 ]
 					}
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u586000386"
+					"varname" : "u037004454"
 				}
 
 			}
@@ -596,6 +616,42 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -737,8 +793,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-4" : [ "slot-num", "live.tab", 0 ],
-			"obj-1" : [ "live.gain~", "live.gain~", 0 ]
+			"obj-1" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-4" : [ "slot-num", "live.tab", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -783,13 +839,34 @@
 				"type" : "JSON",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "cs.2click-inputs.maxpat",
+				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cs.2click.js",
+				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cs.2click-receive~.maxpat",
+				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
  ],
 		"embedsnapshot" : 0,
 		"styles" : [ 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
