@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 45.0, 84.0, 1199.0, 892.0 ],
+		"rect" : [ 190.0, 79.0, 1199.0, 892.0 ],
 		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -38,6 +38,44 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"args" : [ "audio.recorder-module", 5 ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-9",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "cs.2click-outputs.maxpat",
+					"numinlets" : 5,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 139.5, 481.133301, 120.0, 90.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 327.0, 72.0, 120.0, 98.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ -61.0, 649.966614, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 501.0, 97.0, 108.0, 20.0 ],
+					"style" : "",
+					"text" : "Sample Waveform"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-57",
 					"maxclass" : "message",
@@ -100,8 +138,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 949.0, 10.666687, 44.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 428.0, 110.0, 44.0, 22.0 ],
 					"style" : "",
 					"text" : "20000"
 				}
@@ -215,8 +251,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ -61.0, 700.133301, 150.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 475.0, 134.5, 117.0, 20.0 ],
 					"style" : "",
 					"text" : "Buffer Length"
 				}
@@ -234,21 +268,6 @@
 					"patching_rect" : [ 62.0, 120.166687, 33.0, 22.0 ],
 					"style" : "",
 					"text" : "t b s"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ -58.0, 491.166687, 24.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 233.0, 130.0, 24.0, 24.0 ],
-					"style" : ""
 				}
 
 			}
@@ -549,39 +568,9 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ -61.0, 584.133301, 170.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 126.0, 150.0, 24.0 ],
+					"presentation_rect" : [ 4.0, 126.0, 137.0, 24.0 ],
 					"style" : "",
 					"text" : "AUDIO RECORDER"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-30",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ -61.0, 649.133301, 150.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 264.0, 134.5, 117.0, 20.0 ],
-					"style" : "",
-					"text" : "Audio Ouput On/Off"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-26",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ -15.845673, 500.166687, 37.0, 22.0 ],
-					"style" : "",
-					"text" : "dac~"
 				}
 
 			}
@@ -595,7 +584,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ -15.845673, 307.166687, 49.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 264.0, 103.0, 39.0, 20.0 ],
+					"presentation_rect" : [ 264.0, 128.0, 39.0, 20.0 ],
 					"style" : "",
 					"text" : "Play"
 				}
@@ -641,7 +630,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ -49.0, 305.166687, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 233.0, 101.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 233.0, 126.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -677,9 +666,9 @@
 					"numoutlets" : 5,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ -70.464294, 11.666687, 122.0, 95.0 ],
+					"patching_rect" : [ -70.0, 11.0, 120.0, 90.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.0, 15.0, 120.0, 106.0 ],
+					"presentation_rect" : [ 13.0, 15.0, 122.0, 96.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -688,7 +677,7 @@
 				"box" : 				{
 					"allowdrag" : 0,
 					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"buffername" : "#1-live-sample-2",
+					"buffername" : "#1-live-sample-7",
 					"fontsize" : 9.0,
 					"gridcolor" : [ 0.301961, 0.337255, 0.403922, 0.501961 ],
 					"id" : "obj-64",
@@ -756,7 +745,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 62.0, 157.166687, 117.333336, 22.0 ],
 					"style" : "",
-					"text" : "set #1-live-sample-2"
+					"text" : "set #1-live-sample-7"
 				}
 
 			}
@@ -835,7 +824,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 113.845673, 212.0, 49.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 264.0, 72.0, 54.0, 20.0 ],
+					"presentation_rect" : [ 264.0, 97.0, 54.0, 20.0 ],
 					"style" : "",
 					"text" : "Record"
 				}
@@ -868,12 +857,12 @@
 					"patching_rect" : [ 72.0, 740.133301, 58.0, 22.0 ],
 					"restore" : 					{
 						"live.gain~[1]" : [ 0.0 ],
-						"slot-num" : [ 1.0 ]
+						"slot-num" : [ 6.0 ]
 					}
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u008000544"
+					"varname" : "u448002840"
 				}
 
 			}
@@ -940,7 +929,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 82.0, 212.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 233.0, 72.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 233.0, 97.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -981,7 +970,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 1 ],
+					"destination" : [ "obj-9", 4 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 1 ]
@@ -990,7 +979,79 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
+					"destination" : [ "obj-9", 3 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 4 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 3 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 0 ]
@@ -1093,15 +1154,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -1548,6 +1600,20 @@
 			}
 , 			{
 				"name" : "cs.2click-receive~.maxpat",
+				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cs.2click-outputs.maxpat",
+				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cs.2click-send~.maxpat",
 				"bootpath" : "~/Desktop/MUSIC 264 - Working Folder/chris-swithinbank/cs.2click/lib",
 				"patcherrelativepath" : "../../../chris-swithinbank/cs.2click/lib",
 				"type" : "JSON",
